@@ -457,7 +457,8 @@ sub change_status {
             'ASSIGNED'  => 'accept', 
             'REOPENED'    => 'reopen',
             'VERIFIED'  => 'verify',
-            'CLOSED'    => 'close'
+            'CLOSED'    => 'close',
+            'SIGNED OFF'=> 'Signed Off',
             );
 
     my %resolution = (
