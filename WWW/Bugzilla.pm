@@ -308,6 +308,8 @@ sub _login {
         $self->bugzilla_version_minor($2);
     } elsif ($mech->content() =~ /<p class="header_addl_info">version (\d+)\./smi) {
         $self->bugzilla_version($1);
+    } elsif ($mech->content() =~ /<span id="information" class="header_addl_info">version (\d+)\./smi) {
+        $self->bugzilla_version($1);
     } else {
         croak("Unable to verify bugzilla version.");
     }
